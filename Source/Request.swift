@@ -249,7 +249,7 @@ extension NSMutableURLRequest {
         }).joinWithSeparator("&")
         if let u = self.URL where queryString.characters.count > 0 {
             let para = u.query != nil ? "&" : "?"
-            self.URL = NSURL(string: "\(u.absoluteString)\(para)\(queryString)")
+            self.URL = NSURL(string: "\(u.absoluteString!)\(para)\(queryString)")
         }
     }
     
